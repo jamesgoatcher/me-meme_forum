@@ -1,8 +1,18 @@
 # me.meme - forum
 
+###Table of Contents
+I.Synopsis
+II. Necessary Features
+	i. Sign up & Log In
+	ii. Home Page
+	iii. Create Page
+	iv. Show Page
+III. Stretch Features
+IV. Gallery
+V. Legal
+
 ## Synopsis
 A Reddit inspired forum all about the wonderful subject of Memes utilizing the full MEAN stack and made pretty with CSS and jQuery.
-<img src="wireframes/mememe_home_wireframe.png">
 ---
 ## Necessary Features
 
@@ -55,3 +65,6 @@ Create Page:
 
 Show Page:
 <img src="wireframes/mememe_show_wireframe.png">
+
+## Legal
+While it should be implied that I don't claim ownership over any internet memes featured here, let it be known saliently.  However, I do claim ownership to all layout and code produced here, but feel free to use what you like if you provide credit back here.
