@@ -2,7 +2,7 @@
 
 ## Synopsis
 A Reddit inspired forum all about the wonderful subject of Memes utilizing the full MEAN stack and made pretty with CSS and jQuery.
-<img src="mememe_wireframe.png">
+<img src="wireframes/mememe_home_wireframe.png">
 ---
 ## Necessary Features
 
