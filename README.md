@@ -1,6 +1,6 @@
 # me.meme - forum
 
-###Table of Contents
+##Table of Contents
 * I.Synopsis
 * II. Necessary Features
 *	i. Sign up & Log In
@@ -13,7 +13,7 @@
 
 ## Synopsis
 A Reddit inspired forum all about the wonderful subject of Memes utilizing the full MEAN stack and made pretty with CSS and jQuery.
----
+
 ## Necessary Features
 
 ###Sign Up & Log In
