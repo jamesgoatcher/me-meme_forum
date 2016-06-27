@@ -4,13 +4,14 @@
 	<%- include('../partials/head.ejs') %>
 </head>
 	<body>
-		<h1>please choose your username and password</h1>
-		<form action="/users" method="POST">
-			<input type="text" placeholder="choose username" name="username">
-			<input type="password" name="password" placeholder="password">
-			<input type="submit" value="submit">
-		</form>
-		<br>
-		<a href="/">return home</a>
+		<div class="container">
+			<%- include('../partials/header.ejs') %>
+			<h1>please choose your username and password</h1>
+			<form action="/users" method="POST">
+				<input type="text" placeholder="choose username" name="username">
+				<input type="password" name="password" placeholder="password">
+				<input type="submit" value="submit">
+			</form>
+		</div>
 	</body>
 </html>

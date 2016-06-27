@@ -8,11 +8,26 @@ body {
 
 a {
 	color: #aaa;
+	text-decoration: none;
 }
 
 ul {
 	list-style: none;
 	display: inline-block;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	padding: 0 1em;
+}
+
+p {
+	display: inline-block;
+}
+
+span {
+	color: #333;
 }
 
 .container {
@@ -22,6 +37,14 @@ ul {
 	padding: 1em 3em;
 }
 
+.align-right {
+	text-align: right;
+}
+
 #logo {
-	height: 111.2px!important;
+	height: 80px!important;
+}
+
+#logo-meme {
+	padding-right: 1em;
 }

@@ -5,29 +5,28 @@
 </head>
 	<body>
 		<div class="container">
-			<header class="log-sign">
-				<img src="/images/logo-meme.png">me.meme; <!--glyph and title ???????? -->
-				<ul>
-					<li><a href="/login/new">log in</a></li>
-					<li><a href="/users/new">sign up</a></li>
-				</ul>
-			</header>
-			<div class="banner">
-				<img src="/images/banner.png">
-			</div>
+			<%- include('partials/header.ejs') %>
 			<nav class="sort-post">
 				sort by:
 				<ul>
 					<li><a href="#">popular</a></li>
 					<li><a href="#">recent</a></li>
 				</ul>
-				<p>|| <a href="#">+ post new topic</a></p>
+				<p class="align-right">|| <a href="#">+ post new topic</a></p>
 			</nav>
 			<article>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
 			</article>
 			<footer>
 				<p>&copy; james goatcher 2016</p>
-				<img id="logo" src="/images/logo.png">
+				<img class="align-right" id="logo" src="/images/logo.png">
 			</footer>
 		</div>
 	</body>
