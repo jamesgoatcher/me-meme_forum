@@ -51,19 +51,19 @@ A Reddit inspired forum all about the wonderful subject of Memes utilizing the f
 * The user should be able to edit their original post.
 
 ##Gallery
-Home Page:
+###Home Page:
 <img src="wireframes/mememe_home_wireframe.png">
 
-Sign up Page:
+###Sign up Page:
 <img src="wireframes/mememe_signup_wireframe.png">
 
-Log in Page:
+###Log in Page:
 <img src="wireframes/mememe_login_wireframe.png">
 
-Create Page:
+###Create Page:
 <img src="wireframes/mememe_create_wireframe.png">
 
-Show Page:
+###Show Page:
 <img src="wireframes/mememe_show_wireframe.png">
 
 ## Legal

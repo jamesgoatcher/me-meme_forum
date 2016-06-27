@@ -36,7 +36,15 @@ app.use('/login', loginController)
 //views
 //session will go here
 app.get('/', function(req, res) {
-	res.render('home.ejs')
+	if(req.session.loggedInUsername !== undefined){
+		res.render('home.ejs', {
+			userLoggedIn: true
+		});
+	} else {
+		res.render('home.ejs', {
+			userLoggedIn: false
+		});
+	}
 })
 
 
