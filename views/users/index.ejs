@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%- include('../partials/head.ejs') %>
+</head>
+	<body>
+		<div class="container">
+			<%- include('../partials/header.ejs') %>
+			<div class="align-center">
+				<h1>sign up;</h1>
+				<form action="/users" method="POST">
+					<p>username:</p>
+					<input class="input" type="text" placeholder="choose username" name="username">
+					<p>password:</p>
+					<input class="input" type="password" name="password" placeholder="password">
+					<input class="submit" type="submit" value="sign up">
+				</form>
+			</div>
+			<%- include('../partials/footer.ejs') %>
+		</div>
+	</body>
+</html>

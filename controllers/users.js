@@ -6,8 +6,8 @@ var User 		= require('../models/users.js');
 var bcrypt		= require('bcrypt');
 
 //GET - sign up page
-router.get('/new', function(req, res) {
-	res.render('users/new.ejs')
+router.get('/index', function(req, res) {
+	res.render('users/index.ejs')
 })
 
 //allows form post with password encryption and salting

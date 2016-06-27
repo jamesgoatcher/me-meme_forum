@@ -6,13 +6,13 @@
 	<body>
 		<div class="container">
 			<%- include('partials/header.ejs') %>
-			<nav class="sort-post">
-				sort by:
-				<ul>
-					<li><a href="#">popular</a></li>
+			<nav class="align-right">
+				<p class="float-left">sort by:</p>
+				<ul class="float-left">
+					<li><a href="#"><strong>popular</strong></a></li>
 					<li><a href="#">recent</a></li>
 				</ul>
-				<p class="align-right">|| <a href="#">+ post new topic</a></p>
+				<p>|| <a href="#">+ post new topic</a></p>
 			</nav>
 			<article>
 				<div>content</div>
@@ -24,10 +24,7 @@
 				<div>content</div>
 				<div>content</div>
 			</article>
-			<footer>
-				<p>&copy; james goatcher 2016</p>
-				<img class="align-right" id="logo" src="/images/logo.png">
-			</footer>
+			<%- include('partials/footer.ejs') %>
 		</div>
 	</body>
 </html>

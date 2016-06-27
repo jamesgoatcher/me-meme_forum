@@ -28,6 +28,7 @@ p {
 
 span {
 	color: #333;
+	display: inline-block;
 }
 
 .container {
@@ -41,10 +42,46 @@ span {
 	text-align: right;
 }
 
+.align-center {
+	text-align: center;
+}
+
+.float-left {
+	float: left;
+}
+
+.input {
+	display: block;
+	height: 3em;
+	width: 30em;
+	margin: 0 auto;
+}
+
+.submit {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 300;
+	height: 3em;
+	width: 10em;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	margin: 2em 0;
+}
+
+#banner {
+	max-width: 100%;
+}
+
 #logo {
 	height: 80px!important;
+	display: inline-block;
 }
 
 #logo-meme {
 	padding-right: 1em;
 }
+
+#footer-text {
+	margin: 3.5em 0;
+}
+
