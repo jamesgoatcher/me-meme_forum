@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%- include('../partials/head.ejs') %>
+</head>
+	<body>
+		<div class="container">
+			<%- include('../partials/header.ejs') %>
+			<div class="align-center">
+				<h1>new post;</h1>
+				<form action="/users" method="POST">
+					<p>topic:</p>
+					<input class="input" type="text" name="topic">
+					<p>body:</p>
+					<input class="input-body" type="text" name="body">
+					<input class="submit" type="submit" value="post">
+				</form>
+			</div>
+			<%- include('../partials/footer.ejs') %>
+		</div>
+	</body>
+</html>

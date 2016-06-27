@@ -31,6 +31,10 @@ span {
 	display: inline-block;
 }
 
+h2 {
+	font-size: 1em;
+}
+
 .container {
 	background-color: #fff;
 	max-width: 800px;
@@ -50,11 +54,67 @@ span {
 	float: left;
 }
 
+.post {
+	position: relative;
+	height: 85px;
+	border-top: 1px  solid #333;
+	border-bottom: 1px  solid #333;
+	margin: 1em 0;
+}
+
+.like {
+	position: absolute;
+	top: 2em;
+}
+
+.title {
+	font-size: 2em;
+	margin: 0!important;
+	padding: 0;
+	display: block;
+	position: absolute;
+	left: 1.5em;
+}
+
+.timestamp {
+	margin: 0;
+	font-size: .75em;
+	padding: 0;
+	display: block;
+	position: absolute;
+	left: 4.2em;
+	top: 3.3em;
+}
+
+.comments {
+	margin: 0;
+	font-weight: bold;
+	font-size: .75em;
+	display: block;
+	position: absolute;
+	top: 5em;
+	left: 4.1em;
+}
+
 .input {
 	display: block;
 	height: 3em;
 	width: 30em;
 	margin: 0 auto;
+}
+
+.input-body {
+	display: block;
+	padding-bottom: 9em;
+	width: 30em;
+	margin: 0 auto;
+}
+
+.input-comment {
+	display: block;
+	padding-bottom: 9em;
+	width: 30em;
+	text-align: left;
 }
 
 .submit {

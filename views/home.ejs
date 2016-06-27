@@ -12,18 +12,52 @@
 					<li><a href="#"><strong>popular</strong></a></li>
 					<li><a href="#">recent</a></li>
 				</ul>
-				<p>|| <a href="#">+ post new topic</a></p>
+				<p>|| <a href="/users/new">+ post new topic</a></p>
 			</nav>
-			<article>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
+
+			<article class="main-post">
+				<div class="post">
+					<div class="like">
+						+25
+					</div>
+					<h2 class="title"><a href="/users/show"><span>topic #1 title</span></a></h2>
+					<p class="timestamp">submitted on [TIME] by [USER]</p>
+					<p class="comments">[#] comments</p>
+				</div>
+				<div class="post">
+					<div class="like">
+						+18
+					</div>
+					<h2 class="title"><a href="#"><span>topic #2 title</span></a></h2>
+					<p class="timestamp">submitted on [TIME] by [USER]</p>
+					<p class="comments">[#] comments</p>
+				</div>
+				<div class="post">
+					<div class="like">
+						+9
+					</div>
+					<h2 class="title"><a href="#"><span>topic #3 title</span></a></h2>
+					<p class="timestamp">submitted on [TIME] by [USER]</p>
+					<p class="comments">[#] comments</p>
+				</div>
+				<div class="post">
+					<div class="like">
+						+4
+					</div>
+					<h2 class="title"><a href="#"><span>topic #4 title</span></a></h2>
+					<p class="timestamp">submitted on [TIME] by [USER]</p>
+					<p class="comments">[#] comments</p>
+				</div>
+				<div class="post">
+					<div class="like">
+						+0
+					</div>
+					<h2 class="title"><a href="#"><span>topic #5 title</span></a></h2>
+					<p class="timestamp">submitted on [TIME] by [USER]</p>
+					<p class="comments">[#] comments</p>
+				</div>
 			</article>
+
 			<%- include('partials/footer.ejs') %>
 		</div>
 	</body>
