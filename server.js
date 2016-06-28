@@ -5,6 +5,8 @@ var bodyParser     = require('body-parser');
 var mongoose	   = require('mongoose');
 var session	  	   = require('express-session');
 var methodOverride = require('method-override');
+var User 		   = require('./models/users.js');
+var Topic		   = require('./models/topic.js');
 
 //app
 var app 	   = express();
@@ -32,21 +34,24 @@ app.use('/users', userController);
 var loginController = require('./controllers/login.js')
 app.use('/login', loginController)
 
-
 //views
 //session will go here
 app.get('/', function(req, res) {
-	if(req.session.loggedInUsername !== undefined){
-		res.render('home.ejs', {
-			userLoggedIn: true
-		});
-	} else {
-		res.render('home.ejs', {
-			userLoggedIn: false
-		});
-	}
+	Topic.find({}, function(err, data) {
+		if(req.session.loggedInUsername !== undefined){
+			res.render('home.ejs', {
+				username: req.session.loggedInUsername,
+				userLoggedIn: true,
+				topic: data
+			});
+		} else {
+			res.render('home.ejs', {
+				userLoggedIn: false,
+				topic: data
+			});
+		}
+	})
 })
-
 
 //connects to mongo
 mongoose.connect('mongodb://localhost:27017/mememe_forum');

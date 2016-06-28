@@ -3,6 +3,7 @@
 var express		= require('express');
 var router		= express.Router();
 var User 		= require('../models/users.js');
+var Topic		= require('../models/topic.js');
 var bcrypt		= require('bcrypt');
 
 //GET, INDEX - sign up page
@@ -14,9 +15,6 @@ router.get('/index', function(req, res) {
 router.post('/', function(req, res) {
 	req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
 	User.create(req.body, function(err, data) {
-		console.log(err);
-		console.log('===');
-		console.log(data);
 		res.redirect('/');
 	})
 })
@@ -29,6 +27,15 @@ router.get('/new', function(req, res) {
 //GET, SHOW - sign up page
 router.get('/show', function(req, res) {
 	res.render('users/show.ejs')
+})
+
+//POST, HOME - New topic and body
+router.post('/new', function(req, res) {
+	Topic.create(req.body, function(err, topic) {
+		console.log(topic)
+		res.redirect('/')
+		//res.render('/')
+	})
 })
 
 //allows router use

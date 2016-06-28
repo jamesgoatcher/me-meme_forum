@@ -5,57 +5,39 @@
 </head>
 	<body>
 		<div class="container">
-			<%- include('partials/header.ejs') %>
+
+			<% if(userLoggedIn) { %>
+				<%- include('partials/header_true.ejs') %>
+			<% } else { %>
+				<%- include('partials/header.ejs') %>
+			<% } %>
+			
 			<nav class="align-right">
 				<p class="float-left">sort by:</p>
 				<ul class="float-left">
 					<li><a href="#"><strong>popular</strong></a></li>
 					<li><a href="#">recent</a></li>
 				</ul>
-				<p>|| <a href="/users/new">+ post new topic</a></p>
+				<% if(userLoggedIn) { %>
+					<p>|| <a href="/users/new">+ post new topic</a></p>
+				<% } else { %>
+					<p>|| please <a href="/login/index">log in</a> to <strong>post</strong></p>
+				<% } %>
 			</nav>
 
 			<article class="main-post">
-				<div class="post">
-					<div class="like">
-						+25
+		
+				<% for(var i=0; i < topic.length; i++) { %>
+					<div class="post">
+						<div class="like">
+							+25
+						</div>
+						<h2 class="title"><a href="/users/show"><span><%= topic[i].topic %></span></a></h2>
+						<p class="timestamp">submitted on [TIME] by [USER]</p>
+						<p class="comments">[#] comments</p>
 					</div>
-					<h2 class="title"><a href="/users/show"><span>topic #1 title</span></a></h2>
-					<p class="timestamp">submitted on [TIME] by [USER]</p>
-					<p class="comments">[#] comments</p>
-				</div>
-				<div class="post">
-					<div class="like">
-						+18
-					</div>
-					<h2 class="title"><a href="#"><span>topic #2 title</span></a></h2>
-					<p class="timestamp">submitted on [TIME] by [USER]</p>
-					<p class="comments">[#] comments</p>
-				</div>
-				<div class="post">
-					<div class="like">
-						+9
-					</div>
-					<h2 class="title"><a href="#"><span>topic #3 title</span></a></h2>
-					<p class="timestamp">submitted on [TIME] by [USER]</p>
-					<p class="comments">[#] comments</p>
-				</div>
-				<div class="post">
-					<div class="like">
-						+4
-					</div>
-					<h2 class="title"><a href="#"><span>topic #4 title</span></a></h2>
-					<p class="timestamp">submitted on [TIME] by [USER]</p>
-					<p class="comments">[#] comments</p>
-				</div>
-				<div class="post">
-					<div class="like">
-						+0
-					</div>
-					<h2 class="title"><a href="#"><span>topic #5 title</span></a></h2>
-					<p class="timestamp">submitted on [TIME] by [USER]</p>
-					<p class="comments">[#] comments</p>
-				</div>
+				<% } %>
+
 			</article>
 
 			<%- include('partials/footer.ejs') %>
