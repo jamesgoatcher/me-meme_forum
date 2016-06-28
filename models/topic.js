@@ -7,7 +7,8 @@ var User 	 = require('./users.js')
 var topicSchema = mongoose.Schema({
 	topic: String,
 	body: String,
-	user: [User.schema]
+	time: String,
+	user: String
 })
 
 //TOPIC schema in controller

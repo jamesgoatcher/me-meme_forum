@@ -29,6 +29,7 @@ p {
 span {
 	color: #333;
 	display: inline-block;
+	text-transform: none!important;
 }
 
 h2 {

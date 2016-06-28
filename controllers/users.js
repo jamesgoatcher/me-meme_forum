@@ -11,31 +11,35 @@ router.get('/index', function(req, res) {
 	res.render('users/index.ejs')
 })
 
-//allows form post with password encryption and salting
+//POST, INDEX - allows form post with password encryption and salting
 router.post('/', function(req, res) {
 	req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
 	User.create(req.body, function(err, data) {
+		req.session.loggedInUsername = data.username;
 		res.redirect('/');
 	})
 })
 
-//GET, NEW - sign up page
+//GET, NEW - new topic create page
 router.get('/new', function(req, res) {
-	res.render('users/new.ejs')
+	req.session.loggedInUsername;
+	res.render('users/new.ejs', {
+		user: req.session.loggedInUsername
+		}
+	)
 })
 
-//GET, SHOW - sign up page
+//POST, NEW - New topic and body to HOME
+router.post('/new', function(req, res) {
+	req.session.loggedInUsername;
+	Topic.create(req.body, function(err, topic) {
+		res.redirect('/')
+	})
+})
+
+//GET, SHOW - topic comment show page
 router.get('/show', function(req, res) {
 	res.render('users/show.ejs')
-})
-
-//POST, HOME - New topic and body
-router.post('/new', function(req, res) {
-	Topic.create(req.body, function(err, topic) {
-		console.log(topic)
-		res.redirect('/')
-		//res.render('/')
-	})
 })
 
 //allows router use

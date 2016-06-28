@@ -33,7 +33,7 @@
 							+25
 						</div>
 						<h2 class="title"><a href="/users/show"><span><%= topic[i].topic %></span></a></h2>
-						<p class="timestamp">submitted on [TIME] by [USER]</p>
+						<p class="timestamp">submitted on <em><%= topic[i].time %></em> by <strong><span><%= topic[i].user %></span></strong></p>
 						<p class="comments">[#] comments</p>
 					</div>
 				<% } %>
