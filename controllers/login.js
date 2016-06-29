@@ -17,7 +17,7 @@ router.post('/', function(req, res) {
 			req.session.loggedInUsername = foundUser.username; //asigns foundUser.username to the req.session.loggedIn variable in server
 			res.redirect('/') //redirect
 		} else {
-			res.redirect('/login/index') //fail
+			res.redirect('login/error-p') //fail
 		}
 	})
 })
@@ -26,5 +26,16 @@ router.post('/', function(req, res) {
 router.get('/title', function(req, res) {
 	res.render('login/title.ejs');
 });
+
+//GET - error page, username
+router.get('/error-u', function(req, res) {
+	res.render('login/error-u');
+});
+
+//GET - error page, password
+router.get('/error-p', function(req, res) {
+	res.render('login/error-p');
+});
+
 //allows router use
 module.exports = router;

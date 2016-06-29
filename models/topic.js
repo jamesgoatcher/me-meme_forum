@@ -8,7 +8,8 @@ var topicSchema = mongoose.Schema({
 	topic: String,
 	body: String,
 	time: String,
-	user: String
+	user: String,
+	likes: Number
 })
 
 //TOPIC schema in controller

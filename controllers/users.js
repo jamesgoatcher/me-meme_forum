@@ -17,7 +17,7 @@ router.post('/', function(req, res) {
 	User.create(req.body, function(err, data) {
 		if(err) {
 			console.log(err);
-			res.redirect('users/index')
+			res.redirect('/login/error-u')
 		} else {
 		req.session.loggedInUsername = data.username;
 		res.redirect('/');
@@ -27,12 +27,15 @@ router.post('/', function(req, res) {
 
 //GET, NEW - new topic create page
 router.get('/new', function(req, res) {
-	req.session.loggedInUsername;
-	res.render('users/new.ejs', {
-		userLoggedIn: true,
-		username: req.session.loggedInUsername
-		}
-	)
+	if(req.session.loggedInUsername !== undefined){
+		res.render('users/new.ejs', {
+			userLoggedIn: true,
+			username: req.session.loggedInUsername
+		})
+	} else {
+		res.render('users/new.ejs', {
+			userLoggedIn: false,
+	})}
 })
 
 //POST, NEW - New topic and body to HOME
@@ -44,8 +47,15 @@ router.post('/new', function(req, res) {
 })
 
 //GET, SHOW - topic comment show page
-router.get('/show', function(req, res) {
-	res.render('users/show.ejs')
+router.get('/:id', function(req, res) {
+	Topic.findById(req.params.id, function(err, topicFound) {
+		req.session.loggedInUsername;
+		res.render('users/show.ejs', {
+			userLoggedIn: true,
+			username: req.session.loggedInUsername,
+			topic: topicFound,
+		})
+	})
 })
 
 //allows router use

@@ -129,6 +129,18 @@ h2 {
 	margin: 2em 0;
 }
 
+.error {
+	color: red;
+}
+
+.show-data {
+	font-size: .75em;
+}
+
+.show-p {
+	display: block;
+}
+
 #banner {
 	max-width: 100%;
 }
