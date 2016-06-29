@@ -9,10 +9,10 @@ var User 		   = require('./models/users.js');
 var Topic		   = require('./models/topic.js');
 
 //app
-var app 	   = express();
+var app 	  	   = express();
 
-var port = process.env.PORT || 3000;
-var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mememe_forum';
+var port 		   = process.env.PORT || 3000;
+var mongoDBURI 	   = process.env.MONGODB_URI || 'mongodb://localhost:27017/mememe_forum';
 
 //body parser
 app.use(bodyParser.urlencoded({extended: false}));

@@ -69,12 +69,13 @@ h2 {
 }
 
 .title {
-	font-size: 2em;
+	font-size: 1.5em;
 	margin: 0!important;
 	padding: 0;
 	display: block;
 	position: absolute;
-	left: 1.5em;
+	left: 2em;
+	top: .3em;
 }
 
 .timestamp {
