@@ -65,6 +65,6 @@ mongoose.connection.once('open', function() {
 });
 
 //port
-app.listen(3000, function() {
+app.listen(port, function() {
 	console.log('port 3000')
 });
