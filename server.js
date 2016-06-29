@@ -11,6 +11,9 @@ var Topic		   = require('./models/topic.js');
 //app
 var app 	   = express();
 
+var port = process.env.PORT || 3000;
+var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mememe_forum';
+
 //body parser
 app.use(bodyParser.urlencoded({extended: false}));
 //method override
@@ -54,7 +57,7 @@ app.get('/', function(req, res) {
 })
 
 //connects to mongo
-mongoose.connect('mongodb://localhost:27017/mememe_forum');
+mongoose.connect(mongoDBURI);
 
 //console logs me in mongo
 mongoose.connection.once('open', function() {
