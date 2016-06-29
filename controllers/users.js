@@ -15,8 +15,13 @@ router.get('/index', function(req, res) {
 router.post('/', function(req, res) {
 	req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
 	User.create(req.body, function(err, data) {
+		if(err) {
+			console.log(err);
+			res.redirect('users/index')
+		} else {
 		req.session.loggedInUsername = data.username;
 		res.redirect('/');
+		}
 	})
 })
 
@@ -24,7 +29,8 @@ router.post('/', function(req, res) {
 router.get('/new', function(req, res) {
 	req.session.loggedInUsername;
 	res.render('users/new.ejs', {
-		user: req.session.loggedInUsername
+		userLoggedIn: true,
+		username: req.session.loggedInUsername
 		}
 	)
 })

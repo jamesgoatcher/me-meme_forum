@@ -5,11 +5,12 @@ var router  	= express.Router();
 var User    	= require('../models/users.js');
 var bcrypt  	= require('bcrypt');
 
-//GET - login page
+//GET - Log In page
 router.get('/index', function(req, res) {
 	res.render('login/index.ejs');
 });
 
+//POST - Log In page
 router.post('/', function(req, res) {
 	User.findOne({username: req.body.username}, function(err, foundUser) { //searches for username and returns foundUser
 		if(foundUser && bcrypt.compareSync(req.body.password, foundUser.password)){ //compares typed password to stored encrypted
@@ -21,5 +22,9 @@ router.post('/', function(req, res) {
 	})
 })
 
+//GET - title page
+router.get('/title', function(req, res) {
+	res.render('login/title.ejs');
+});
 //allows router use
 module.exports = router;
