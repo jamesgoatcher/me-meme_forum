@@ -3,6 +3,7 @@
 var express		= require('express');
 var router		= express.Router();
 var User 		= require('../models/users.js');
+var Comments 	= require('../models/comments.js')
 var Topic		= require('../models/topic.js');
 var bcrypt		= require('bcrypt');
 
@@ -54,6 +55,27 @@ router.get('/:id', function(req, res) {
 			userLoggedIn: true,
 			username: req.session.loggedInUsername,
 			topic: topicFound,
+		})
+	})
+})
+
+// //GET, PUT - comment on topic show page
+// router.put('/:id', function(req, res) {
+// 	Topic.findByIdAndUpdate(
+// 		req.params.id, 
+// 		req.body, 
+// 		{new: true}, 
+// 		function(err, topicFound) {
+// 			res.redirect('/users/' + topicFound._id)
+// 	})
+// })
+
+//GET, PUT - comment on topic show page
+router.post('/:id', function(req, res) {
+	Topic.findById(req.params.id, function(err, topicFound) {
+		topicFound.comments.push(req.body)
+		topicFound.save(function() {
+			res.redirect('/users/' + topicFound._id)
 		})
 	})
 })

@@ -36,7 +36,7 @@
 						<h2 class="title"><a href="/users/<%= topic[i]._id %>"><span><%= topic[i].topic %></span></a></h2>
 
 						<p class="timestamp">submitted on <em><%= topic[i].time %></em> by <strong><span><%= topic[i].user %></span></strong></p>
-						<p class="comments"><%= topic[i].comments %> comments</p>
+						<p class="comments"><%= topic[i].comments.length %> comments</p>
 					</div>
 				<% } %>
 

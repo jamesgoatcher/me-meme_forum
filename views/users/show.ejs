@@ -15,9 +15,15 @@
 				<p class="show-data">submitted <em><%= topic.time %></em> by <strong><%= topic.user %></strong></p>
 				<p class="show-p"><%= topic.body %></p>
 				<hr>
-				<form action="/users" method="POST">
+				<% for(var i=0; i < topic.comments.length; i++) { %>
+					<div class="comment-show">
+						a <!--test to check loop works -->
+					</div>
+				<% } %>
+				
+				<form action="/users/<%= topic._id %>" method="POST">
 					<h2>reply to thread</h2>
-					<input class="input-comment" type="text" name="comment">
+					<input class="input-comment" type="text" name="comments">
 					<input class="submit" type="submit" value="post">
 				</form>
 				<br>

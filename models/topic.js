@@ -2,6 +2,7 @@
 //dependencies
 var mongoose = require('mongoose')
 var User 	 = require('./users.js')
+var Comments = require('./comments.js')
 
 //TOPIC schema
 var topicSchema = mongoose.Schema({
@@ -10,7 +11,8 @@ var topicSchema = mongoose.Schema({
 	time: String,
 	user: String,
 	likes: Number,
-	comments: Number
+	comments: [Comments.schema],
+	comments_num: Number
 })
 
 //TOPIC schema in controller

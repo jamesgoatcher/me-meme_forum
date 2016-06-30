@@ -7,6 +7,7 @@ var session	  	   = require('express-session');
 var methodOverride = require('method-override');
 var User 		   = require('./models/users.js');
 var Topic		   = require('./models/topic.js');
+var Comments	   = require('./models/comments.js');
 
 //app
 var app 	  	   = express();
