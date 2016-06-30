@@ -21,8 +21,8 @@
 			</div>
 			
 			<div class="show-body">
-				<h1 class="show-h1"><%= topic.topic %></h1>
-				<p class="show-data">submitted <em><%= topic.time %></em> by <span><%= topic.user %></span></p>
+				<h1 class="show-h1 normalcase"><%= topic.topic %></h1>
+				<p class="show-data">submitted <em><%= topic.time %></em> by <strong class="normalcase"><%= topic.user %></strong></p>
 					<br>
 			</div>
 		</div>
@@ -31,7 +31,7 @@
 
 				<% for(var i=0; i < topic.comments.length; i++) { %>
 					<div class="comment-show">
-						<span><%= topic.comments[i].author %>: </span><%= topic.comments[i].comment %>
+						<strong class="normalcase"><%= topic.comments[i].author %>: </strong><%= topic.comments[i].comment %>
 					</div>
 				<% } %>
 
