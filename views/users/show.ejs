@@ -35,7 +35,7 @@
 					</div>
 				<% } %>
 
-
+		<% if(userLoggedIn) { %>
 			<div class="show-form">
 				<form action="/users/<%= topic._id %>" method="POST">
 					<h2>reply to thread</h2>
@@ -46,6 +46,9 @@
 				<br>
 				<a href="/">return to main</a>
 			</div>
+		<% } else { %>
+		<p>please sign up or log in to post a comment.</p>
+		<% } %>
 			<%- include('../partials/footer.ejs') %>
 		</div>
 	</body>
