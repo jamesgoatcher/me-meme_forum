@@ -28,9 +28,14 @@
 			<article class="main-post">
 		
 				<% for(var i=0; i < topic.length; i++) { %>
+
 					<div class="post">
+
 						<div class="like">
-							+<%= topic[i].likes %>
+							<form action="/?_method=PUT" method="POST">
+								+<input type="hidden" name="likes" value="<%= parseInt((topic[i].likes + 1), 10) %>">
+								<input class="submit-like" type="submit" value="<%= topic[i].likes %>">
+							</form>
 						</div>
 
 						<h2 class="title"><a href="/users/<%= topic[i]._id %>"><span><%= topic[i].topic %></span></a></h2>

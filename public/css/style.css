@@ -68,6 +68,21 @@ h2 {
 	top: 2em;
 }
 
+.submit-like {
+	position: absolute;
+	top: 0em;
+	left: 1em;
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 300;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
 .title {
 	font-size: 1.5em;
 	margin: 0!important;
@@ -136,10 +151,26 @@ h2 {
 
 .show-data {
 	font-size: .75em;
+	margin: 0;
 }
 
 .show-p {
 	display: block;
+	padding: 0 0 0 1em;
+}
+
+.show-h1 {
+	margin: .5em 0 0 0;
+}
+
+.show-form {
+	margin: 1.5em 0 0 0;
+}
+
+.comment-show {
+	padding: 0 0 0 4em;
+	margin: .5em 0;
+	font-size: .8em;
 }
 
 #banner {

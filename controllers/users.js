@@ -59,18 +59,7 @@ router.get('/:id', function(req, res) {
 	})
 })
 
-// //GET, PUT - comment on topic show page
-// router.put('/:id', function(req, res) {
-// 	Topic.findByIdAndUpdate(
-// 		req.params.id, 
-// 		req.body, 
-// 		{new: true}, 
-// 		function(err, topicFound) {
-// 			res.redirect('/users/' + topicFound._id)
-// 	})
-// })
-
-//GET, PUT - comment on topic show page
+//SHOW, POST - comment on topic show page
 router.post('/:id', function(req, res) {
 	Topic.findById(req.params.id, function(err, topicFound) {
 		topicFound.comments.push(req.body)
