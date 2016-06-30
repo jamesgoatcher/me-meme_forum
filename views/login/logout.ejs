@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>me.meme : your meme-speak</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<meta charset="UTF-8">
+<body>
+	<div class="container">
+		<header class="align-right">
+			<a class="float-left" href="/"><img id="logo-meme" src="/images/logo-meme.png"><span>me.meme;</span></a>
+				<ul>
+					<li>welcome, <strong><span><%= username %></span></strong> | <a href="/login/logout">log out</a></li>
+				</ul>
+		</header>
+		<div>
+			<img id="banner" src="/images/banner.png">
+		</div>
+		<div class="align-center">
+			<p class="error text">are you sure you want to log out?</p>
+			<br>
+				<form action="/login/logout" method="POST">
+				<input class="submit" type="submit" value="do it">
+				</form>
+		</div>
+		<footer class="align-right">
+			<p class="float-left" id="footer-text">&copy; james goatcher 2016</p>
+			<a href="/login/title"><img class="align-right" id="logo" src="/images/logo.png"></a>
+		</footer>
+	</div>
+</body>
+</html>

@@ -47,15 +47,23 @@ router.post('/new', function(req, res) {
 	})
 })
 
-//GET, SHOW - topic comment show page
+//SHOW, GET - topic comment show page
 router.get('/:id', function(req, res) {
 	Topic.findById(req.params.id, function(err, topicFound) {
-		req.session.loggedInUsername;
-		res.render('users/show.ejs', {
-			userLoggedIn: true,
-			username: req.session.loggedInUsername,
-			topic: topicFound,
-		})
+		//req.session.loggedInUsername;
+		if(req.session.loggedInUsername !== undefined) {
+			res.render('users/show.ejs', {
+				userLoggedIn: true,
+				username: req.session.loggedInUsername,
+				topic: topicFound,
+			})
+		} else {
+			res.render('users/show.ejs', {
+				userLoggedIn: false,
+				username: req.session.loggedInUsername,
+				topic: topicFound,
+			})
+		}
 	})
 })
 

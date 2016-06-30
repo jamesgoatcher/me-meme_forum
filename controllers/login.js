@@ -37,5 +37,19 @@ router.get('/error-p', function(req, res) {
 	res.render('login/error-p');
 });
 
+//GET - logout page
+router.get('/logout', function(req, res) {
+	res.render('login/logout', {
+		username: req.session.loggedInUsername
+	});
+});
+
+//POST - logout page
+router.post('/logout', function(req, res) {
+	req.session.destroy(function(err) {
+		res.redirect('/')
+	})
+});
+
 //allows router use
 module.exports = router;
