@@ -27,11 +27,11 @@
 			</div>
 		</div>
 
-				<p class="show-p"><%= topic.body %></p>
+				<p class="show-p normalcase"><%= topic.body %></p>
 
 				<% for(var i=0; i < topic.comments.length; i++) { %>
 					<div class="comment-show">
-						<strong class="normalcase"><%= topic.comments[i].author %>: </strong><%= topic.comments[i].comment %>
+						<strong class="normalcase"><%= topic.comments[i].author %>: </strong><p class="normalcase inline-p"><%= topic.comments[i].comment %></p>
 					</div>
 				<% } %>
 
@@ -49,6 +49,8 @@
 		<% } else { %>
 		<br>
 		<p class="error text">please sign up or log in to post a comment.</p>
+		<br>
+		<a href="/">return to main</a>
 		<% } %>
 			<%- include('../partials/footer.ejs') %>
 		</div>
