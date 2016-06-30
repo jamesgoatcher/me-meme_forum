@@ -3,8 +3,8 @@
 var express		= require('express');
 var router		= express.Router();
 var User 		= require('../models/users.js');
-var Comments 	= require('../models/comments.js')
 var Topic		= require('../models/topic.js');
+var Comments 	= require('../models/comments.js');
 var bcrypt		= require('bcrypt');
 
 //GET, INDEX - sign up page

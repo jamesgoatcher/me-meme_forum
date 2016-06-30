@@ -5,11 +5,12 @@ var Topic	 = require('./topic.js')
 
 //USER schema
 var commentsSchema = mongoose.Schema({
-	comment: String
+	comment: String,
+	author: String
 })
 
 //USER schema in controller
 var Comments = mongoose.model('Comments', commentsSchema);
 
 //allows router
-module.exports = Comments
+module.exports = Comments;

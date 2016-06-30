@@ -11,8 +11,7 @@ var topicSchema = mongoose.Schema({
 	time: String,
 	user: String,
 	likes: Number,
-	comments: [Comments.schema],
-	comments_num: Number
+	comments: [Comments.schema]
 })
 
 //TOPIC schema in controller

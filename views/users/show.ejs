@@ -17,13 +17,14 @@
 				<hr>
 				<% for(var i=0; i < topic.comments.length; i++) { %>
 					<div class="comment-show">
-						a <!--test to check loop works -->
+						<strong><%= topic.comments[i].author %>: </strong><%= topic.comments[i].comment %>
 					</div>
 				<% } %>
 				
 				<form action="/users/<%= topic._id %>" method="POST">
 					<h2>reply to thread</h2>
-					<input class="input-comment" type="text" name="comments">
+					<input class="input-comment" type="text" name="comment">
+					<input type="hidden" name="author" value="<%= username %>">
 					<input class="submit" type="submit" value="post">
 				</form>
 				<br>
