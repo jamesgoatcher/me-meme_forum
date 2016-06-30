@@ -10,9 +10,23 @@
 			<% } else { %>
 				<%- include('../partials/header.ejs') %>
 			<% } %>
-			<div>
+		
+		<div class="show-main">
+			<div class="show-put-form">
+				<div class="show-fix">+</div>
+				<form class="show-form-likes" action="/users/<%= topic._id %>?_method=PUT" method="POST">
+				<input type="hidden" name="likes" value="<%= parseInt((topic.likes + 1), 10) %>">
+				<input class="submit-like" type="submit" value="<%= topic.likes %>">
+				</form>
+			</div>
+			
+			<div class="show-body">
 				<h1 class="show-h1"><%= topic.topic %></h1>
 				<p class="show-data">submitted <em><%= topic.time %></em> by <strong><%= topic.user %></strong></p>
+					<br>
+			</div>
+		</div>
+
 				<p class="show-p"><%= topic.body %></p>
 
 				<% for(var i=0; i < topic.comments.length; i++) { %>
@@ -20,7 +34,8 @@
 						<strong><%= topic.comments[i].author %>: </strong><%= topic.comments[i].comment %>
 					</div>
 				<% } %>
-			</div>
+
+
 			<div class="show-form">
 				<form action="/users/<%= topic._id %>" method="POST">
 					<h2>reply to thread</h2>

@@ -66,13 +66,30 @@ h2 {
 .like {
 	position: absolute;
 	top: 2em;
+	font-weight: bolder;
+}
+
+.show-main {
+	display: flex;
+}
+
+.show-put-form {
+	display: inline-flex;
+	align-self: center;
+/*	display: inline-block;
+	height: 100%;
+	width: 100%;*/
+}
+
+.show-form-likes {
+	display: inline-block;
+	margin: 0!important;
 }
 
 .submit-like {
-	position: absolute;
-	top: 0em;
-	left: 1em;
+	font-size: 1.5em;
 	font-family: 'Source Code Pro', monospace;
+	display: inline-block;
 	font-weight: 300;
 	height: 100%;
 	width: 100%;
@@ -81,6 +98,15 @@ h2 {
 	border: none;
 	margin: 0;
 	padding: 0;
+}
+
+.submit-like:hover {
+	color:#aaa;
+}
+
+.show-fix {
+	display: inline-block;
+	font-size: 1.5em;
 }
 
 .title {
@@ -149,28 +175,37 @@ h2 {
 	color: red;
 }
 
+.show-body {
+	display: inline-block;
+	margin: 0 0 0 1em;
+}
+
 .show-data {
 	font-size: .75em;
 	margin: 0;
 }
 
 .show-p {
-	display: block;
-	padding: 0 0 0 1em;
+	display: inline-block;
+	padding: 1em;
+	margin: 2em 0 1em 3em;
+	border-top: 1px  solid #aaa;
+	border-bottom: 1px  solid #aaa;
 }
 
 .show-h1 {
-	margin: .5em 0 0 0;
+	margin: 0;
 }
 
 .show-form {
-	margin: 1.5em 0 0 0;
+	margin: 2em 0 0 2.9em;
 }
 
 .comment-show {
 	padding: 0 0 0 4em;
-	margin: .5em 0;
+	margin: 1em 3.8em;
 	font-size: .8em;
+	border-left: 1px  solid #333;
 }
 
 #banner {

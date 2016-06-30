@@ -32,10 +32,7 @@
 					<div class="post">
 
 						<div class="like">
-							<form action="/?_method=PUT" method="POST">
-								+<input type="hidden" name="likes" value="<%= parseInt((topic[i].likes + 1), 10) %>">
-								<input class="submit-like" type="submit" value="<%= topic[i].likes %>">
-							</form>
+							+<%= topic[i].likes %>
 						</div>
 
 						<h2 class="title"><a href="/users/<%= topic[i]._id %>"><span><%= topic[i].topic %></span></a></h2>

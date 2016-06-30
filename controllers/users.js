@@ -69,5 +69,16 @@ router.post('/:id', function(req, res) {
 	})
 })
 
+//SHOW, PUT - likes on home page
+router.put('/:id', function(req, res) {
+	Topic.findByIdAndUpdate(
+		req.params.id,
+		req.body, 
+		{new: true}, 
+		function(err, topicFound) {
+			res.redirect('/users/'+ topicFound._id)
+	})
+})
+
 //allows router use
 module.exports 	= router;

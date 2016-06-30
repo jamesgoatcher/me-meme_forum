@@ -57,18 +57,6 @@ app.get('/', function(req, res) {
 	})
 })
 
-//HOME, PUT - likes on home page
-app.put('/', function(req, res) {
-	Topic.findOneAndUpdate(
-		req.click,
-		req.body, 
-		{new: true}, 
-		function(err, topicFound) {
-			console.log(topicFound)
-			res.redirect('/')
-	})
-})
-
 //connects to mongo
 mongoose.connect(mongoDBURI);
 
