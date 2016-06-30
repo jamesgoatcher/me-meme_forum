@@ -76,9 +76,6 @@ h2 {
 .show-put-form {
 	display: inline-flex;
 	align-self: center;
-/*	display: inline-block;
-	height: 100%;
-	width: 100%;*/
 }
 
 .show-form-likes {
