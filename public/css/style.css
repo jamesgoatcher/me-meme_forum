@@ -164,3 +164,32 @@ h2 {
 	margin: 25% auto;
 	text-align: center;
 }
+
+@media (max-width: 780px) {
+	.post {
+		height: 100%;
+		display: inline-block;
+		position: static;
+	}
+
+	.like {
+		display: inline-block;
+		position: static;
+	}
+
+	.title {
+		font-size: 1.25em;
+		display: inline-block;
+		position: static;
+	}
+	.timestamp {
+		display: block;
+		position: static;
+	}
+
+	.comments {
+		display: block;
+		position: static;
+	}
+
+}
