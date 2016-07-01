@@ -1,5 +1,7 @@
 # me.meme - forum
 
+[https://radiant-depths-68561.herokuapp.com/login/title](https://radiant-depths-68561.herokuapp.com/login/title)
+
 ##Table of Contents
 * I.Synopsis
 * II. Necessary Features
@@ -12,7 +14,7 @@
 * V. Legal
 
 ## Synopsis
-A Reddit inspired forum all about the wonderful subject of Memes utilizing the full MEAN stack and made pretty with CSS and jQuery.
+A Reddit inspired forum all about the wonderful subject of Memes utilizing the full MEAN stack and made pretty with CSS3.
 
 ## Necessary Features
 
